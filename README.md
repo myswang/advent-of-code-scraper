@@ -1,8 +1,8 @@
-# advent-of-code-scraper: A Python script that fetches Advent of Code completion statistics
+# advent-of-code-scraper
 
 *Disclaimer: Please refrain from using this script to send large quantities of **automated requests** to the Advent of Code [website](https://adventofcode.com).*
 
-This Python script scrapes the [stats page](https://adventofcode.com/2023/stats) from Advent of Code and displays completion statistics per day for a given year.
+This is a Python script that scrapes the [stats page](https://adventofcode.com/2023/stats) from Advent of Code and displays completion statistics for each day in a given year.
 
 ## Quick Start
 
@@ -33,7 +33,7 @@ options:
   -y YEAR, --year YEAR  event year to fetch
 ```
 
-You may optionally specify a year to fetch completion stats from:
+You may optionally specify a year to fetch completion stats:
 
 ```
 $ python aoc_scraper.py --year 2020
