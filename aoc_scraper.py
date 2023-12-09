@@ -21,7 +21,7 @@ def fetch_stats(year):
             day_num, two_star, one_star = day
             total_stars = one_star + two_star
             two_star_rate = two_star / total_stars * 100
-            print(f" {day_num:>2} {two_star:>6} {one_star:>6} {total_stars:>6} {two_star_rate:.2f}")
+            print(f" {day_num:>2} {two_star:>6} {one_star:>6} {total_stars:>6} {two_star_rate:>5.2f}")
         print("---------------------------------------------------")
         print(f"Retrieved {datetime.now(timezone.utc).replace(microsecond=0)}.")
         sys.exit(0)
