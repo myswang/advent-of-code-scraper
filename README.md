@@ -1,7 +1,5 @@
 # advent-of-code-scraper
 
-*Disclaimer: Please refrain from using this script to send large quantities of **automated requests** to the Advent of Code [website](https://adventofcode.com).*
-
 This is a Python script that scrapes the [stats page](https://adventofcode.com/2023/stats) from Advent of Code and displays completion statistics for each day in a given year.
 
 ## Quick Start
