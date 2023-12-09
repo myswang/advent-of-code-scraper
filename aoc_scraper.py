@@ -12,16 +12,16 @@ def fetch_stats(year):
         days = re.findall(pattern, response.text)
         for idx, day in enumerate(days):
             days[idx] = tuple(int(num) for num in re.findall(r"\d+", day))
-        print("---------------------------------------------------")
+        print("----------------------------------------------------")
         print(f"Completion statistics for Advent of Code {year}:")
-        print("** = both parts completed, * = first part completed")
-        print("---------------------------------------------------")
-        print("Day     **     *  Total  ** %")
+        print("2* = both parts completed, 1* = first part completed")
+        print("----------------------------------------------------")
+        print("Day     2*     1*  Total  2* %")
         for day in days:
             day_num, two_star, one_star = day
             total_stars = one_star + two_star
             two_star_rate = two_star / total_stars * 100
-            print(f" {day_num:>2} {two_star:>6} {one_star:>5} {total_stars:>6} {two_star_rate:.2f}")
+            print(f" {day_num:>2} {two_star:>6} {one_star:>6} {total_stars:>6} {two_star_rate:.2f}")
         print("---------------------------------------------------")
         print(f"Retrieved {datetime.now(timezone.utc).replace(microsecond=0)}.")
         sys.exit(0)
