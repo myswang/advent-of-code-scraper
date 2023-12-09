@@ -22,7 +22,7 @@ def fetch_stats(year):
             total_stars = one_star + two_star
             two_star_rate = two_star / total_stars * 100
             print(f" {day_num:>2} {two_star:>6} {one_star:>6} {total_stars:>6} {two_star_rate:>5.2f}")
-        print("---------------------------------------------------")
+        print("----------------------------------------------------")
         print(f"Retrieved {datetime.now(timezone.utc).replace(microsecond=0)}.")
         sys.exit(0)
     elif response.status_code == 404:
