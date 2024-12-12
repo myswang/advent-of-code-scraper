@@ -8,7 +8,7 @@ def fetch_stats(year):
     url = f"https://adventofcode.com/{year}/stats"
     response = requests.get(url)
     if response.status_code == 200:
-        pattern = re.compile(f"<a href=\"/{year}/day/\d+\">(.*?)</a>")
+        pattern = re.compile(fr"<a href=\"/{year}/day/\d+\">(.*?)</a>")
         days = re.findall(pattern, response.text)
         for idx, day in enumerate(days):
             days[idx] = tuple(int(num) for num in re.findall(r"\d+", day))
